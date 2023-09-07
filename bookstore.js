@@ -27,13 +27,10 @@ const dataPenjualanPakAdi = [
 
 function hitungTotalPenjualan (dataPenjualan){
     let sum = 0;
-    const totalPenjualanPeritems = dataPenjualan.map((items)=>{
-        const penjualanPerItems = items.hargaSatuan * items.totalTerjual;
-        return penjualanPerItems
+    dataPenjualan.map((items)=>{
+        const penjualanPerItems = items.totalTerjual
+        sum += penjualanPerItems;
     }); 
-    totalPenjualanPeritems.map((item) => {
-        sum += item;
-    });
     return sum;
 }
-console.log(hitungTotalPenjualan(dataPenjualanPakAdi))
+console.log(hitungTotalPenjualan(dataPenjualanPakAdi));
