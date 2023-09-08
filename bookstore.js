@@ -26,11 +26,15 @@ const dataPenjualanPakAdi = [
 ]
 
 function hitungTotalPenjualan (dataPenjualan){
-    let sum = 0;
-    dataPenjualan.map((items)=>{
-        const penjualanPerItems = items.totalTerjual
-        sum += penjualanPerItems;
-    }); 
+    if (typeof dataPenjualan != "object") {
+        return "Eror: Invalid data type"
+    } else {
+        let sum = 0;
+        dataPenjualan.map((items)=>{
+            const penjualanPerItems = items.totalTerjual
+            sum += penjualanPerItems;
+        }); 
     return sum;
+}
 }
 console.log(hitungTotalPenjualan(dataPenjualanPakAdi));
