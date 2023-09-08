@@ -100,4 +100,4 @@ function getInfoPenjualan(dataPenjualan){
         return result ;
     }
 }
-console.log(getInfoPenjualan(dataa))
+console.log(getInfoPenjualan(dataPenjualanNovel))
